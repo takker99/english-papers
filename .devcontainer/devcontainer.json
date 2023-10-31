@@ -1,0 +1,137 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"taichi.vscode-textlint",
+				"James-Yu.latex-workshop"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+				// Remove the following to check .md files with Grammarly.
+				"grammarly.files.exclude": [
+					"**/*.md"
+				],
+				"grammarly.files.include": [
+					"**/*.tex"
+				],
+				"grammarly.selectors": [
+					{
+						"language": "latex",
+						"scheme": "file"
+					}
+				],
+				"latex-workshop.codespaces.portforwarding.openDelay": 20000,
+				"latex-workshop.latex.autoBuild.run": "onSave",
+				// Edit the following property to change export directory
+				"latex-workshop.latex.autoClean.run": "onBuilt",
+				"latex-workshop.latex.build.forceRecipeUsage": false,
+				"latex-workshop.latex.clean.fileTypes": [
+					"*.aux",
+					"*.bbl",
+					"*.blg",
+					"*.idx",
+					"*.ind",
+					"*.lof",
+					"*.lot",
+					"*.out",
+					"*.toc",
+					"*.acn",
+					"*.acr",
+					"*.alg",
+					"*.glg",
+					"*.glo",
+					"*.gls",
+					"*.fls",
+					"*.log",
+					"*.fdb_latexmk",
+					"*.snm",
+					"*.synctex(busy)",
+					"*.synctex.gz(busy)",
+					"*.nav",
+					"*.vrb",
+					"*.gz", // Added Manually
+					"*.bcf", // Added Manually
+					"*.nlo", // Added Manually
+					"*.run.xml" // Added Manually
+				],
+				"latex-workshop.latex.clean.method": "command",
+				"latex-workshop.latex.outDir": "%DIR%/dist",
+				"latex-workshop.latex.recipe.default": "latexmk (cd)",
+				"latex-workshop.latex.recipes": [
+					{
+						"name": "latexmk",
+						"tools": [
+							"latexmk (cd)"
+						]
+					},
+					{
+						"name": "latexmk (force)",
+						"tools": [
+							"latexmk (cd, force rebuild)"
+						]
+					}
+				],
+				"latex-workshop.latex.tools": [
+					{
+						"args": [
+							"-r",
+							"%WORKSPACE_FOLDER%/.latexmkrc",
+							"-cd",
+							"%DOC%"
+						],
+						"command": "latexmk",
+						"name": "latexmk (cd)"
+					},
+					{
+						"args": [
+							"-r",
+							"%WORKSPACE_FOLDER%/.latexmkrc",
+							"-g",
+							"-cd",
+							"%DOC%"
+						],
+						"command": "latexmk",
+						"name": "latexmk (cd, force rebuild)"
+					}
+				],
+				"latex-workshop.latex.watch.pdf.delay": 500,
+				"latex-workshop.linting.chktex.enabled": true,
+				"latex-workshop.linting.chktex.exec.args": [
+					"-wall",
+					"-n19",
+					"-n22",
+					"-n30",
+					"-e16",
+					"-q"
+				],
+				"latex-workshop.linting.lacheck.enabled": true,
+				"latex-workshop.synctex.afterBuild.enabled": true,
+				"latex-workshop.view.pdf.color.dark.backgroundColor": "#171717", // For Dark Viewer
+				// Remove / comment the next 3 lines to remove dark view for pdf
+				"latex-workshop.view.pdf.color.dark.pageColorsBackground": "#171717", // For Dark Viewwer
+				"latex-workshop.view.pdf.color.dark.pageColorsForeground": "#FFFFFF", // For Dark Viewer
+				"latex-workshop.view.pdf.viewer": "browser"
+			}
+		}
+	},
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"./latex": {
+			"scheme": "basic"
+		}
+	},
+	"image": "mcr.microsoft.com/devcontainers/universal:linux",
+	"name": "latex",
+	"onCreateCommand": "npm install"
+	// "features": {},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+	// Configure tool-specific properties.
+	// "customizations": {},
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

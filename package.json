@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "textlint": "^13.3.3",
+    "textlint-filter-rule-comments": "^1.2.2",
+    "textlint-plugin-latex2e": "^1.2.1",
+    "textlint-rule-apostrophe": "^2.0.0",
+    "textlint-rule-diacritics": "^1.0.0",
+    "textlint-rule-en-capitalization": "^2.0.3",
+    "textlint-rule-en-max-word-count": "^2.0.1",
+    "textlint-rule-ginger": "^2.2.1",
+    "textlint-rule-spellchecker": "^2.2.1",
+    "textlint-rule-write-good": "^2.0.0"
+  }
+}

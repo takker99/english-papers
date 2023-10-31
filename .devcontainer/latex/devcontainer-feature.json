@@ -1,0 +1,31 @@
+{
+    "name": "LaTeX",
+    "id": "latex",
+    "version": "1.0.0",
+    "description": "A feature to use TeXLive",
+    "options": {
+        "scheme": {
+            "type": "string",
+            "enum": [
+                "minimal",
+                "basic",
+                "small",
+                "medium",
+                "full"
+            ],
+            "default": "basic",
+            "description": "Choose texlive scheme."
+        },
+        "srcfiles": {
+            "type": "boolean",
+            "default": false,
+            "description": "whether to install source files"
+        },
+
+        "docfiles": {
+            "type": "boolean",
+            "default": false,
+            "description": "whether to install documentation files"
+        }
+    }
+}

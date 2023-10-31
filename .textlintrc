@@ -1,0 +1,17 @@
+{
+  "filters": {
+    "comments": true
+  },
+  "plugins": [
+    "latex2e"
+  ],
+  "rules": {
+    "apostrophe": true,
+    "diacritics": true,
+    "en-capitalization": true,
+    "en-max-word-count": true,
+    "ginger": true,
+    "spellchecker": true,
+    "write-good": true
+  }
+}
